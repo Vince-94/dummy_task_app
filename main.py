@@ -1,13 +1,11 @@
 from typing import List
 
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-
 from mangum import Mangum
+from pydantic import BaseModel
 
 
 app = FastAPI()
-handler = Mangum(app)
 
 
 # Dummy data (in-memory database)
@@ -75,3 +73,6 @@ def delete_task(task_id: int):
 
     deleted_task = tasks.pop(task_index)
     return deleted_task
+
+
+handler = Mangum(app)
