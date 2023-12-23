@@ -7,7 +7,7 @@ phases:
   build:
     commands:
       - echo "Zipping deployment package..."
-      - cd lib
+      - cd venv/lib/python3.10/site-packages
       - zip -r9 ../../../../dummy_task_app.zip .
       - cd ../../../..
       - zip -g dummy_task_app.zip main.py
