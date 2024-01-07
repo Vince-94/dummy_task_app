@@ -1,5 +1,5 @@
 requests
 pydantic
-fastapi
-uvicorn
-mangum>
+fastapi==0.103.1
+uvicorn==0.23.2
+mangum==0.17.0

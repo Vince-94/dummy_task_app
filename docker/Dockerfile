@@ -9,7 +9,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Python deps
 COPY requirements.txt ${LAMBDA_TASK_ROOT}
-RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
+RUN pip install -r requirements.txt
 
 # Copy volume
 COPY main.py ${LAMBDA_TASK_ROOT}/main.py
